@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controlador">
+    <top>
+        <HBox spacing="10" padding="10">
+            <TextField fx:id="nombreField" promptText="Nombre de la fruta"/>
+            <TextField fx:id="precioKgField" promptText="Precio por Kg"/>
+            <TextField fx:id="stockKgField" promptText="Stock en Kg"/>
+            <Button text="Insertar" onAction="#handleInsert"/>
+            <Button text="Actualizar" onAction="#handleUpdate"/>
+            <Button text="Eliminar" onAction="#handleDelete"/>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn text="ID" fx:id="idColumn"/>
+                <TableColumn text="Nombre" fx:id="nombreColumn"/>
+                <TableColumn text="Precio/Kg" fx:id="precioKgColumn"/>
+                <TableColumn text="Stock/Kg" fx:id="stockKgColumn"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
